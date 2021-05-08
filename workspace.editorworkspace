@@ -5,5 +5,30 @@
 	"firstLoad": false,
 	"watchProject": true,
 	"physicsEngine": "cannon",
-	"pluginsPreferences": {}
+	"pluginsPreferences": {},
+	"https": {
+		"enabled": true,
+		"certPath": "/Users/limes/Documents/BJSEditor/Editorv4_webxr_dev_gitprivate/BJSEditorv4_WebXRdev/html/cert.pem",
+		"keyPath": "/Users/limes/Documents/BJSEditor/Editorv4_webxr_dev_gitprivate/BJSEditorv4_WebXRdev/html/key.pem"
+	},
+	"ktx2CompressedTextures": {
+		"enabled": false,
+		"pvrTexToolCliPath": "",
+		"forcedFormat": "automatic",
+		"enabledInPreview": false,
+		"astcOptions": {
+			"quality": "astcveryfast"
+		},
+		"pvrtcOptions": {
+			"quality": "pvrtcfastest"
+		},
+		"ect1Options": {
+			"enabled": false,
+			"quality": "etcfast"
+		},
+		"ect2Options": {
+			"enabled": false,
+			"quality": "etcfast"
+		}
+	}
 }

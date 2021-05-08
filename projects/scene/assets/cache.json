@@ -21,16 +21,6 @@
 	"Sounds": [],
 	"Scripts": [
 		{
-			"id": "WebXRconfig.ts",
-			"key": "WebXRconfig.ts",
-			"base64": "../css/images/ts.png",
-			"style": {
-				"borderColor": "#2FA1D6",
-				"borderStyle": "solid",
-				"borderWidth": "0px"
-			}
-		},
-		{
 			"id": "decorators.ts",
 			"key": "decorators.ts",
 			"base64": "../css/images/ts.png",

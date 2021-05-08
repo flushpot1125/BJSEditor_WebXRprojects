@@ -6,8 +6,13 @@
 	"materials": [
 		{
 			"bindedMeshes": [
-				"0ea78d97-3c1f-4911-8d78-2b4cd65a0424"
+				"6a927ea7-51d9-4248-9b80-4d34b53b386e"
 			],
+			"json": "sky-b2346078-7465-4c63-8877-44b542584898.json",
+			"isMultiMaterial": false
+		},
+		{
+			"bindedMeshes": [],
 			"json": "ground-44ce4d7a-5718-4025-a141-272ee6387673.json",
 			"isMultiMaterial": false
 		},
@@ -17,20 +22,21 @@
 			],
 			"json": "cube-03bdd37e-fe54-4095-a392-0de62b0de089.json",
 			"isMultiMaterial": false
-		},
-		{
-			"bindedMeshes": [
-				"6a927ea7-51d9-4248-9b80-4d34b53b386e"
-			],
-			"json": "sky-b2346078-7465-4c63-8877-44b542584898.json",
-			"isMultiMaterial": false
 		}
 	],
 	"textures": [],
 	"meshes": [
-		"cube-e22f3d3a-65b2-4993-8c52-cb05d2af8278.json",
+		"Sphere_Left_YButton-c86d0b04-2804-4f70-be05-61d00d9a90c6.json",
+		"Box_Left_ThumbStick-b1b00a1b-0263-4b5a-972e-9e110b8851e4.json",
+		"Box_Left_Trigger-e22f3d3a-65b2-4993-8c52-cb05d2af8278.json",
+		"Sphere_Right_BButton-35d2626d-a390-4c52-b9d5-6b427206215f.json",
+		"Box_Left_Squeeze-12a0dd41-9715-4663-9054-de7bcca504ca.json",
+		"Box_Right_Squeeze-5a9e9742-f64d-40ec-9791-d59a2c54d569.json",
+		"Box_Right_ThumbStick-850d6378-a804-4af5-b387-77611e94df1f.json",
+		"Sphere_Right_AButton-45365cfd-c1a6-49c3-83f7-f504242efdf3.json",
+		"Sphere_Left_XButton-c9667025-5181-45cb-b1a2-c34292dfd942.json",
 		"sky-6a927ea7-51d9-4248-9b80-4d34b53b386e.json",
-		"ground-0ea78d97-3c1f-4911-8d78-2b4cd65a0424.json"
+		"Box_Right_Trigger-cb37c5d4-ef9f-46cf-b4e9-56bade264003.json"
 	],
 	"transformNodes": [
 		"WebXRconfig-a7222279-c6f2-41d0-b0af-adaf2fb6d1cc.json"
@@ -47,9 +53,9 @@
 	"scene": {
 		"autoClear": false,
 		"clearColor": [
-			0.2,
-			0.2,
-			0.3,
+			0.4549019607843137,
+			0.7254901960784313,
+			1,
 			1
 		],
 		"ambientColor": [
@@ -226,9 +232,9 @@
 	"project": {
 		"camera": {
 			"tags": "modified",
-			"alpha": 2.469171247720734,
-			"beta": 1.3614465403869094,
-			"radius": 5.805663043258613,
+			"alpha": -1.4260241256703257,
+			"beta": 0.8127340352641335,
+			"radius": 20.27892092655747,
 			"target": [
 				0,
 				0.5194425582885742,
@@ -262,9 +268,9 @@
 			],
 			"speed": 2,
 			"position": [
-				-4.442695547914423,
-				1.7259982497941502,
-				3.5372875206428613
+				2.1244667895600737,
+				14.461517690552814,
+				-14.571884428992904
 			],
 			"upVector": [
 				0,
@@ -273,7 +279,7 @@
 			],
 			"fov": 0.8,
 			"minZ": 1,
-			"maxZ": 15000,
+			"maxZ": 22500,
 			"inertia": 0.9,
 			"mode": 0,
 			"layerMask": 268435455,

@@ -4,7 +4,7 @@
 		{
 			"name": "sky",
 			"id": "6a927ea7-51d9-4248-9b80-4d34b53b386e",
-			"uniqueId": 11,
+			"uniqueId": 18,
 			"type": "Mesh",
 			"tags": "modified",
 			"position": [
@@ -46,7 +46,7 @@
 			"pickable": true,
 			"receiveShadows": false,
 			"billboardMode": 0,
-			"visibility": 1,
+			"visibility": 0.35,
 			"checkCollisions": false,
 			"isBlocker": false,
 			"overrideMaterialSideOrientation": null,
@@ -56,7 +56,10 @@
 			"materialId": "b2346078-7465-4c63-8877-44b542584898",
 			"metadata": {
 				"isPickable": true,
-				"script": {}
+				"script": {
+					"name": "None"
+				},
+				"renderingGroupId": 0
 			},
 			"instances": [],
 			"animations": [],
