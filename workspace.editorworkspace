@@ -1,5 +1,5 @@
 {
-	"lastOpenedScene": "projects/scene/scene.editorproject",
+	"lastOpenedScene": "projects/dramset/scene.editorproject",
 	"serverPort": 1338,
 	"generateSceneOnSave": true,
 	"firstLoad": false,
@@ -8,8 +8,8 @@
 	"pluginsPreferences": {},
 	"https": {
 		"enabled": true,
-		"certPath": "/Users/limes/Documents/BJSEditor/Editorv4_webxr_dev_gitprivate/BJSEditorv4_WebXRdev/html/cert.pem",
-		"keyPath": "/Users/limes/Documents/BJSEditor/Editorv4_webxr_dev_gitprivate/BJSEditorv4_WebXRdev/html/key.pem"
+		"certPath": "/Users/takayuki/Documents/BJSEditor/Editorv4_webxr_dev_gitprivate/BJSEditorv4_WebXRdev/html/cert.pem",
+		"keyPath": "/Users/takayuki/Documents/BJSEditor/Editorv4_webxr_dev_gitprivate/BJSEditorv4_WebXRdev/html/key.pem"
 	},
 	"ktx2CompressedTextures": {
 		"enabled": false,
