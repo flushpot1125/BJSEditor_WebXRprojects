@@ -98,7 +98,50 @@ export default class WebXRConfigDramset extends Node {
 
            xr.input.onControllerAddedObservable.add((controller) => {
                 controller.onMotionControllerInitObservable.add((motionController) => {
+                    const xr_ids = motionController.getComponentIds();
                     if (motionController.handness === 'left') {
+                        let cymbal4_left_standardTrigger_Component = motionController.getComponent(xr_ids[0]);//xr-standard-trigger
+                        cymbal4_left_standardTrigger_Component.onButtonStateChangedObservable.add(() => {
+                            if (cymbal4_left_standardTrigger_Component.pressed) {
+                                __cymbal4.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                            }else{
+                                __cymbal4.scaling= new BABYLON.Vector3(1,1,1);
+                            }
+                        });
+                        let cymbal3_left_squeeze_Component = motionController.getComponent(xr_ids[1]);//xr-standard-squeeze
+                        cymbal3_left_squeeze_Component.onButtonStateChangedObservable.add(() => {
+                            if (cymbal3_left_squeeze_Component.pressed) {
+                                __cymbal3.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                            }else{
+                                __cymbal3.scaling= new BABYLON.Vector3(1,1,1);
+                            }
+                        });
+                        /*
+                        let thumbstickComponent = motionController.getComponent(xr_ids[2]);//xr-standard-thumbstick
+                        thumbstickComponent.onButtonStateChangedObservable.add(() => {
+                            if (thumbstickComponent.pressed) {
+                                __Box_Left_ThumbStick.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                            }else{
+                                __Box_Left_ThumbStick.scaling=new BABYLON.Vector3(1,1,1);
+                            }
+                        });
+                        */
+                        let dram3_left_button_Component = motionController.getComponent(xr_ids[3]);//x-button
+                        dram3_left_button_Component.onButtonStateChangedObservable.add(() => {
+                            if (dram3_left_button_Component.pressed) {
+                                __Dram3.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                            }else{
+                                __Dram3.scaling= new BABYLON.Vector3(1,1,1);
+                            }
+                        });
+                        let dram4_left_button_Component = motionController.getComponent(xr_ids[4]);//y-button
+                        dram4_left_button_Component.onButtonStateChangedObservable.add(() => {
+                            if (dram4_left_button_Component.pressed) {
+                                __Dram4.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                            }else{
+                                __Dram4.scaling= new BABYLON.Vector3(1,1,1);
+                            }
+                        });
                     }
                     if (motionController.handness === 'right') {
                     }
