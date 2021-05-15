@@ -144,6 +144,40 @@ export default class WebXRConfigDramset extends Node {
                         });
                     }
                     if (motionController.handness === 'right') {
+                        let cymbal1_right_standardTrigger_Component = motionController.getComponent(xr_ids[0]);//xr-standard-trigger
+                        cymbal1_right_standardTrigger_Component.onButtonStateChangedObservable.add(() => {
+                            if (cymbal1_right_standardTrigger_Component.pressed) {
+                                __cymbal1.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                            }else{
+                                __cymbal1.scaling= new BABYLON.Vector3(1,1,1);
+                            }
+                        });
+                        let cymbal2_right_squeeze_Component = motionController.getComponent(xr_ids[1]);//xr-standard-squeeze
+                        cymbal2_right_squeeze_Component.onButtonStateChangedObservable.add(() => {
+                            if (cymbal2_right_squeeze_Component.pressed) {
+                                __cymbal2.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                            }else{
+                                __cymbal2.scaling= new BABYLON.Vector3(1,1,1);
+                            }
+                        });
+                        let dram2_right_button_Component = motionController.getComponent(xr_ids[3]);//a-button
+                        dram2_right_button_Component.onButtonStateChangedObservable.add(() => {
+                            if (dram2_right_button_Component.pressed) {
+                                __Dram2.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                            }else{
+                                __Dram2.scaling= new BABYLON.Vector3(1,1,1);
+                            }
+                        });
+                        let dram1_right_button_Component = motionController.getComponent(xr_ids[4]);//b-button
+                        dram1_right_button_Component.onButtonStateChangedObservable.add(() => {
+                            if (dram1_right_button_Component.pressed) {
+                                __Dram1.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                            }else{
+                                __Dram1.scaling= new BABYLON.Vector3(1,1,1);
+                            }
+                        });
+
+
                     }
                 })
            });

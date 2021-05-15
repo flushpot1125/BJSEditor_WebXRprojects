@@ -177,6 +177,42 @@ var WebXRConfigDramset = /** @class */ (function (_super) {
                                         });
                                     }
                                     if (motionController.handness === 'right') {
+                                        var cymbal1_right_standardTrigger_Component_1 = motionController.getComponent(xr_ids[0]); //xr-standard-trigger
+                                        cymbal1_right_standardTrigger_Component_1.onButtonStateChangedObservable.add(function () {
+                                            if (cymbal1_right_standardTrigger_Component_1.pressed) {
+                                                __cymbal1.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+                                            }
+                                            else {
+                                                __cymbal1.scaling = new BABYLON.Vector3(1, 1, 1);
+                                            }
+                                        });
+                                        var cymbal2_right_squeeze_Component_1 = motionController.getComponent(xr_ids[1]); //xr-standard-squeeze
+                                        cymbal2_right_squeeze_Component_1.onButtonStateChangedObservable.add(function () {
+                                            if (cymbal2_right_squeeze_Component_1.pressed) {
+                                                __cymbal2.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+                                            }
+                                            else {
+                                                __cymbal2.scaling = new BABYLON.Vector3(1, 1, 1);
+                                            }
+                                        });
+                                        var dram2_right_button_Component_1 = motionController.getComponent(xr_ids[3]); //a-button
+                                        dram2_right_button_Component_1.onButtonStateChangedObservable.add(function () {
+                                            if (dram2_right_button_Component_1.pressed) {
+                                                __Dram2.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+                                            }
+                                            else {
+                                                __Dram2.scaling = new BABYLON.Vector3(1, 1, 1);
+                                            }
+                                        });
+                                        var dram1_right_button_Component_1 = motionController.getComponent(xr_ids[4]); //b-button
+                                        dram1_right_button_Component_1.onButtonStateChangedObservable.add(function () {
+                                            if (dram1_right_button_Component_1.pressed) {
+                                                __Dram1.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+                                            }
+                                            else {
+                                                __Dram1.scaling = new BABYLON.Vector3(1, 1, 1);
+                                            }
+                                        });
                                     }
                                 });
                             });
