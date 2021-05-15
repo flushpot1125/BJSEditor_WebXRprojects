@@ -1,26 +1,25 @@
 {
-	"multiMaterials": [],
 	"materials": [],
 	"meshes": [
 		{
-			"name": "Dram0",
-			"id": "c44ea76d-9268-49da-a159-7ee36766de3e",
-			"uniqueId": 28,
+			"name": "cymbal2",
+			"id": "f238a2be-5a06-4f8c-b0f0-4cd3a3d5f580",
+			"uniqueId": 17,
 			"type": "Mesh",
 			"position": [
-				0,
-				0.1823,
-				1.4327
+				-2500,
+				-1030.3882120292708,
+				-808.5464920500325
 			],
 			"rotation": [
 				0,
 				0,
-				0
+				3.1416
 			],
 			"scaling": [
-				0.1578,
-				0.7934,
-				0.1316
+				1,
+				0.1176,
+				1
 			],
 			"localMatrix": {
 				"0": 1,
@@ -42,41 +41,46 @@
 			},
 			"isEnabled": true,
 			"isVisible": true,
+			"infiniteDistance": false,
 			"pickable": true,
 			"receiveShadows": false,
 			"billboardMode": 0,
 			"visibility": 1,
-			"checkCollisions": false,
+			"checkCollisions": true,
 			"isBlocker": false,
 			"isUnIndexed": false,
-			"geometryId": "0ec1a4a2-b1de-47be-95eb-3d7d0696dca4",
+			"geometryId": "16bab4aa-c32d-47c7-9296-6b961404b82d",
 			"subMeshes": null,
-			"materialId": "5fa3bd56-83e8-4760-9596-eb3f9ceb71c4",
+			"materialId": "9cdd1c02-fd59-46ac-9e9c-25c683d1b38f",
 			"metadata": {
 				"basePoseMatrix": {
-					"0": 6.337135314941406,
-					"1": 0,
+					"0": -1,
+					"1": 0.00006246947305044159,
 					"2": 0,
 					"3": 0,
-					"4": 0,
-					"5": 1.260398268699646,
+					"4": -0.000007346409802266862,
+					"5": -8.503400802612305,
 					"6": 0,
 					"7": 0,
 					"8": 0,
 					"9": 0,
-					"10": 7.59878396987915,
+					"10": 1,
 					"11": 0,
-					"12": 0,
-					"13": -0.22977061569690704,
-					"14": -10.886777877807617,
+					"12": 0.00000966640618571546,
+					"13": 11.188775062561035,
+					"14": -5.056000232696533,
 					"15": 1
 				},
 				"originalSourceFile": {
-					"id": "Dram0",
-					"name": "Dram0",
-					"sceneFileName": "dramset.babylon"
+					"id": "symbal2",
+					"name": "symbal2",
+					"sceneFileName": "dram_v3.babylon"
 				},
-				"isPickable": true
+				"isPickable": true,
+				"script": {
+					"name": "None"
+				},
+				"renderingGroupId": 0
 			},
 			"instances": [],
 			"animations": [],
@@ -90,46 +94,46 @@
 				0
 			],
 			"applyFog": true,
-			"delayLoadingFile": "geometries/0ec1a4a2-b1de-47be-95eb-3d7d0696dca4.babylonbinarymeshdata",
+			"delayLoadingFile": "geometries/16bab4aa-c32d-47c7-9296-6b961404b82d.babylonbinarymeshdata",
 			"boundingBoxMaximum": [
-				10.1366,
-				1.2914,
-				1.2714
+				1,
+				1,
+				1
 			],
 			"boundingBoxMinimum": [
-				-10.1366,
-				-1.2623,
-				-23.0467
+				-1,
+				-3.9030001163482666,
+				-1
 			],
 			"_binaryInfo": {
 				"positionsAttrDesc": {
-					"count": 5145,
+					"count": 1116,
 					"stride": 3,
 					"offset": 0,
 					"dataType": 1
 				},
 				"normalsAttrDesc": {
-					"count": 5145,
+					"count": 1116,
 					"stride": 3,
-					"offset": 20580,
+					"offset": 4464,
 					"dataType": 1
 				},
 				"uvsAttrDesc": {
-					"count": 3430,
+					"count": 744,
 					"stride": 2,
-					"offset": 41160,
+					"offset": 8928,
 					"dataType": 1
 				},
 				"indicesAttrDesc": {
-					"count": 2052,
+					"count": 372,
 					"stride": 1,
-					"offset": 54880,
+					"offset": 11904,
 					"dataType": 0
 				},
 				"subMeshesAttrDesc": {
-					"count": 2,
+					"count": 1,
 					"stride": 5,
-					"offset": 63088,
+					"offset": 13392,
 					"dataType": 0
 				}
 			},
@@ -140,5 +144,6 @@
 			"indices": null
 		}
 	],
+	"multiMaterials": [],
 	"lods": []
 }

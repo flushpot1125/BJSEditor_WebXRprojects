@@ -7,7 +7,7 @@
 	"disableBumpMap": false,
 	"ambientTextureStrength": 1,
 	"ambientTextureImpactOnAnalyticalLights": 0,
-	"metallic": 0,
+	"metallic": 0.8092,
 	"roughness": 0.5,
 	"metallicF0Factor": 1,
 	"metallicReflectanceColor": [
@@ -21,9 +21,9 @@
 		0
 	],
 	"albedo": [
-		0.0014,
-		0,
-		0.0442
+		0.8,
+		0.2343,
+		0.0219
 	],
 	"reflectivity": [
 		0.5,
@@ -162,8 +162,8 @@
 		"_isEnabled": true
 	},
 	"useLogarithmicDepth": false,
-	"id": "1de58da0-0d5b-41d7-8847-6e566bc2211a",
-	"name": "black.004",
+	"id": "9cdd1c02-fd59-46ac-9e9c-25c683d1b38f",
+	"name": "metal_yellow",
 	"checkReadyOnEveryCall": false,
 	"checkReadyOnlyOnce": false,
 	"state": "",
@@ -261,9 +261,9 @@
 	},
 	"metadata": {
 		"originalSourceFile": {
-			"id": "black.004",
-			"name": "black.004",
-			"sceneFileName": "dramset.babylon"
+			"id": "metal_yellow",
+			"name": "metal_yellow",
+			"sceneFileName": "dram_v3.babylon"
 		}
 	}
 }

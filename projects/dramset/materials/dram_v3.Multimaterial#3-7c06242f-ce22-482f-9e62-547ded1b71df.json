@@ -1,0 +1,16 @@
+{
+	"name": "dram_v3.Multimaterial#3",
+	"id": "7c06242f-ce22-482f-9e62-547ded1b71df",
+	"tags": null,
+	"materials": [
+		"bd5a1952-45be-46c4-a51d-4c4a9cd7d6bc",
+		"7eff273b-6f05-41c9-90b2-1ca5ad3a2e50"
+	],
+	"metadata": {
+		"originalSourceFile": {
+			"id": "dram_v3.Multimaterial#3",
+			"name": "dram_v3.Multimaterial#3",
+			"sceneFileName": "dram_v3.babylon"
+		}
+	}
+}

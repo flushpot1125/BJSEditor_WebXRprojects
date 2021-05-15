@@ -162,8 +162,8 @@
 		"_isEnabled": true
 	},
 	"useLogarithmicDepth": false,
-	"id": "1de58da0-0d5b-41d7-8847-6e566bc2211a",
-	"name": "black.004",
+	"id": "15d86715-2b1d-4bcf-b19b-e507217786cf",
+	"name": "black.002",
 	"checkReadyOnEveryCall": false,
 	"checkReadyOnlyOnce": false,
 	"state": "",
@@ -261,9 +261,9 @@
 	},
 	"metadata": {
 		"originalSourceFile": {
-			"id": "black.004",
-			"name": "black.004",
-			"sceneFileName": "dramset.babylon"
+			"id": "black.002",
+			"name": "black.002",
+			"sceneFileName": "dram_v3.babylon"
 		}
 	}
 }

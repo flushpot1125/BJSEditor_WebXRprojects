@@ -1,4 +1,5 @@
 import { Node } from "@babylonjs/core";
+import { Mesh } from "@babylonjs/core";
 /**
  * This represents a script that is attached to a node in the editor.
  * Available nodes are:
@@ -17,7 +18,16 @@ import { Node } from "@babylonjs/core";
  * The function "onInitialize" is called immediately after the constructor is called.
  * The functions "onStart" and "onUpdate" are called automatically.
  */
-export default class MyScript extends Node {
+export default class WebXRConfigDramset extends Node {
+    _Dram0: Mesh;
+    _Dram1: Mesh;
+    _Dram2: Mesh;
+    _Dram3: Mesh;
+    _Dram4: Mesh;
+    _cymbal1: Mesh;
+    _cymbal2: Mesh;
+    _cymbal3: Mesh;
+    _cymbal4: Mesh;
     /**
      * Override constructor.
      * @warn do not fill.
