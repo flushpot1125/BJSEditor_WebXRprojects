@@ -18,7 +18,8 @@ var Game = /** @class */ (function () {
      */
     Game.prototype._load = function () {
         var _this = this;
-        var rootUrl = "./scenes/scene/";
+        //const rootUrl = "./scenes/scene/";
+        var rootUrl = "./scenes/dramset/";
         core_1.SceneLoader.Append(rootUrl, "scene.babylon", this.scene, function () {
             _this.scene.executeWhenReady(function () {
                 // Attach camera.

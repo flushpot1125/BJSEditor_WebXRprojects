@@ -20,12 +20,12 @@
 	"infiniteDistance": false,
 	"ignoreNonUniformScaling": false,
 	"reIntegrateRotationIntoRotationQuaternion": false,
-	"name": "WebXRConfig",
-	"id": "75415b7f-25ee-4663-b417-c3fb9baed52f",
+	"name": "Particle",
+	"id": "e3c3ec9b-637b-4d1a-9431-9d1a9e49c767",
 	"state": "",
 	"metadata": {
 		"script": {
-			"name": "src/scenes/dramset/WebXRconfig_dram.ts"
+			"name": "src/scenes/dramset/Particle.ts"
 		}
 	},
 	"type": "TransformNode",

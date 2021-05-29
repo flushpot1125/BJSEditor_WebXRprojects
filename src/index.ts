@@ -28,7 +28,8 @@ export class Game {
      * Loads the first scene.
      */
     private _load(): void {
-        const rootUrl = "./scenes/scene/";
+        //const rootUrl = "./scenes/scene/";
+        const rootUrl = "./scenes/dramset/";
 
         SceneLoader.Append(rootUrl, "scene.babylon", this.scene, () => {
             this.scene.executeWhenReady(() => {
