@@ -95,6 +95,9 @@ export default class WebXRConfigDramset extends Node {
                    floorMeshes: [env.ground]
             });
 
+            //changed position when WebXR immersive-vr mode is active. 
+            xr.baseExperience.camera.position.set(-0.83, 2, 11);
+
 
 
             /* avoid low performance thanks for @ninisan_drumath */
@@ -117,16 +120,21 @@ export default class WebXRConfigDramset extends Node {
                         cymbal4_left_standardTrigger_Component.onButtonStateChangedObservable.add(() => {
                             if (cymbal4_left_standardTrigger_Component.pressed) {
                                 __cymbal4.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                                __particle.start_lineParticle();
+
                             }else{
                                 __cymbal4.scaling= new BABYLON.Vector3(1,1,1);
+                                __particle.stop_lineParticle();
                             }
                         });
                         let cymbal3_left_squeeze_Component = motionController.getComponent(xr_ids[1]);//xr-standard-squeeze
                         cymbal3_left_squeeze_Component.onButtonStateChangedObservable.add(() => {
                             if (cymbal3_left_squeeze_Component.pressed) {
                                 __cymbal3.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                                __particle.start_mucisNoteParticle();
                             }else{
                                 __cymbal3.scaling= new BABYLON.Vector3(1,1,1);
+                                __particle.stop_mucisNoteParticle();
                             }
                         });
                         /*
@@ -161,9 +169,11 @@ export default class WebXRConfigDramset extends Node {
                         cymbal1_right_standardTrigger_Component.onButtonStateChangedObservable.add(() => {
                             if (cymbal1_right_standardTrigger_Component.pressed) {
                                 __cymbal1.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                                __particle.start_mucisNoteDoubleParticle();
                                
                             }else{
                                 __cymbal1.scaling= new BABYLON.Vector3(1,1,1);
+                                __particle.stop_mucisNoteDoubleParticle();
                                
                             }
                         });
@@ -183,7 +193,7 @@ export default class WebXRConfigDramset extends Node {
                         dram2_right_button_Component.onButtonStateChangedObservable.add(() => {
                             if (dram2_right_button_Component.pressed) {
                                 __Dram2.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
-                                __particle.stop_starParticle();
+                               
                                
                             }else{
                                 __Dram2.scaling= new BABYLON.Vector3(1,1,1);

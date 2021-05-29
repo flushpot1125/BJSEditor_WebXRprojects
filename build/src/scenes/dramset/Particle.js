@@ -41,6 +41,9 @@ var tools_1 = require("../tools");
  * The functions "onStart" and "onUpdate" are called automatically.
  */
 var starParticleSystem;
+var musicNoteParticleSystem;
+var musicNoteDoubleParticleSystem;
+var lineParticleSystem;
 var ParticleComponent = /** @class */ (function (_super) {
     __extends(ParticleComponent, _super);
     /**
@@ -65,9 +68,24 @@ var ParticleComponent = /** @class */ (function (_super) {
     ParticleComponent.prototype.onStart = function () {
         starParticleSystem = new BABYLON.ParticleSystem("particles", 200, this._scene);
         starParticleSystem.particleTexture = new BABYLON.Texture("../../../../scenes/dramset/files/star.png", this._scene);
-        starParticleSystem.emitter = new BABYLON.Vector3(0, 0.5, 0);
-        starParticleSystem.minLifeTime = 5;
-        starParticleSystem.maxLifeTime = 5;
+        starParticleSystem.emitter = new BABYLON.Vector3(1, 2.2, 6.95);
+        starParticleSystem.minLifeTime = 0.2;
+        starParticleSystem.maxLifeTime = 1;
+        musicNoteParticleSystem = new BABYLON.ParticleSystem("particles", 200, this._scene);
+        musicNoteParticleSystem.particleTexture = new BABYLON.Texture("../../../../scenes/dramset/files/music_note.png", this._scene);
+        musicNoteParticleSystem.emitter = new BABYLON.Vector3(-4, 2.2, -6.95);
+        musicNoteParticleSystem.minLifeTime = 0.2;
+        musicNoteParticleSystem.maxLifeTime = 1;
+        musicNoteDoubleParticleSystem = new BABYLON.ParticleSystem("particles", 200, this._scene);
+        musicNoteDoubleParticleSystem.particleTexture = new BABYLON.Texture("../../../../scenes/dramset/files/music_notes.png", this._scene);
+        musicNoteDoubleParticleSystem.emitter = new BABYLON.Vector3(-1, 2.2, 6.95);
+        musicNoteDoubleParticleSystem.minLifeTime = 0.2;
+        musicNoteDoubleParticleSystem.maxLifeTime = 1;
+        lineParticleSystem = new BABYLON.ParticleSystem("particles", 200, this._scene);
+        lineParticleSystem.particleTexture = new BABYLON.Texture("../../../../scenes/dramset/files/line.png", this._scene);
+        lineParticleSystem.emitter = new BABYLON.Vector3(4, 2.2, -6.95);
+        lineParticleSystem.minLifeTime = 0.2;
+        lineParticleSystem.maxLifeTime = 1;
     };
     /**
      * Called each frame.
@@ -101,6 +119,24 @@ var ParticleComponent = /** @class */ (function (_super) {
     };
     ParticleComponent.prototype.stop_starParticle = function () {
         starParticleSystem.stop();
+    };
+    ParticleComponent.prototype.start_mucisNoteParticle = function () {
+        musicNoteParticleSystem.start();
+    };
+    ParticleComponent.prototype.stop_mucisNoteParticle = function () {
+        musicNoteParticleSystem.stop();
+    };
+    ParticleComponent.prototype.start_mucisNoteDoubleParticle = function () {
+        musicNoteDoubleParticleSystem.start();
+    };
+    ParticleComponent.prototype.stop_mucisNoteDoubleParticle = function () {
+        musicNoteDoubleParticleSystem.stop();
+    };
+    ParticleComponent.prototype.start_lineParticle = function () {
+        lineParticleSystem.start();
+    };
+    ParticleComponent.prototype.stop_lineParticle = function () {
+        lineParticleSystem.stop();
     };
     __decorate([
         tools_1.onKeyboardEvent(65, core_1.KeyboardEventTypes.KEYDOWN)

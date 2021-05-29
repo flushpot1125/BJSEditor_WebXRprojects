@@ -29,4 +29,10 @@ export default class ParticleComponent extends TransformNode {
     protected particlestop_test(): void;
     start_starParticle(): void;
     stop_starParticle(): void;
+    start_mucisNoteParticle(): void;
+    stop_mucisNoteParticle(): void;
+    start_mucisNoteDoubleParticle(): void;
+    stop_mucisNoteDoubleParticle(): void;
+    start_lineParticle(): void;
+    stop_lineParticle(): void;
 }

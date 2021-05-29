@@ -123,6 +123,8 @@ var WebXRConfigDramset = /** @class */ (function (_super) {
                                 })];
                         case 1:
                             xr = _a.sent();
+                            //changed position when WebXR immersive-vr mode is active. 
+                            xr.baseExperience.camera.position.set(-0.83, 2, 11);
                             /* avoid low performance thanks for @ninisan_drumath */
                             __scene.postProcessRenderPipelineManager.detachCamerasFromRenderPipeline("ssao", __scene.activeCamera);
                             __scene.postProcessRenderPipelineManager.supportedPipelines.forEach(function (pp) {
@@ -136,18 +138,22 @@ var WebXRConfigDramset = /** @class */ (function (_super) {
                                         cymbal4_left_standardTrigger_Component_1.onButtonStateChangedObservable.add(function () {
                                             if (cymbal4_left_standardTrigger_Component_1.pressed) {
                                                 __cymbal4.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+                                                __particle.start_lineParticle();
                                             }
                                             else {
                                                 __cymbal4.scaling = new BABYLON.Vector3(1, 1, 1);
+                                                __particle.stop_lineParticle();
                                             }
                                         });
                                         var cymbal3_left_squeeze_Component_1 = motionController.getComponent(xr_ids[1]); //xr-standard-squeeze
                                         cymbal3_left_squeeze_Component_1.onButtonStateChangedObservable.add(function () {
                                             if (cymbal3_left_squeeze_Component_1.pressed) {
                                                 __cymbal3.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+                                                __particle.start_mucisNoteParticle();
                                             }
                                             else {
                                                 __cymbal3.scaling = new BABYLON.Vector3(1, 1, 1);
+                                                __particle.stop_mucisNoteParticle();
                                             }
                                         });
                                         /*
@@ -184,9 +190,11 @@ var WebXRConfigDramset = /** @class */ (function (_super) {
                                         cymbal1_right_standardTrigger_Component_1.onButtonStateChangedObservable.add(function () {
                                             if (cymbal1_right_standardTrigger_Component_1.pressed) {
                                                 __cymbal1.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+                                                __particle.start_mucisNoteDoubleParticle();
                                             }
                                             else {
                                                 __cymbal1.scaling = new BABYLON.Vector3(1, 1, 1);
+                                                __particle.stop_mucisNoteDoubleParticle();
                                             }
                                         });
                                         var cymbal2_right_squeeze_Component_1 = motionController.getComponent(xr_ids[1]); //xr-standard-squeeze
@@ -205,7 +213,6 @@ var WebXRConfigDramset = /** @class */ (function (_super) {
                                         dram2_right_button_Component_1.onButtonStateChangedObservable.add(function () {
                                             if (dram2_right_button_Component_1.pressed) {
                                                 __Dram2.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
-                                                __particle.stop_starParticle();
                                             }
                                             else {
                                                 __Dram2.scaling = new BABYLON.Vector3(1, 1, 1);
