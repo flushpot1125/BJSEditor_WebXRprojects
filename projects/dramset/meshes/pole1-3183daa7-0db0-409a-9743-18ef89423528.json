@@ -4,12 +4,12 @@
 		{
 			"name": "pole1",
 			"id": "3183daa7-0db0-409a-9743-18ef89423528",
-			"uniqueId": 362,
+			"uniqueId": 16,
 			"type": "Mesh",
 			"position": [
-				-7500,
-				-3233.310817666488,
-				-4882.409812572641
+				0,
+				0,
+				0
 			],
 			"rotation": [
 				0,
@@ -41,6 +41,7 @@
 			},
 			"isEnabled": true,
 			"isVisible": true,
+			"infiniteDistance": false,
 			"pickable": true,
 			"receiveShadows": false,
 			"billboardMode": 0,
@@ -75,7 +76,11 @@
 					"name": "pole1",
 					"sceneFileName": "dram_v4.babylon"
 				},
-				"isPickable": true
+				"isPickable": true,
+				"script": {
+					"name": "None"
+				},
+				"renderingGroupId": 0
 			},
 			"instances": [],
 			"animations": [],
@@ -91,14 +96,14 @@
 			"applyFog": true,
 			"delayLoadingFile": "geometries/e5caca29-643a-4159-8ebc-82a6ece73bec.babylonbinarymeshdata",
 			"boundingBoxMaximum": [
-				-2.657,
-				2.6451,
-				5.3559
+				-2.6570000648498535,
+				2.6451001167297363,
+				5.355899810791016
 			],
 			"boundingBoxMinimum": [
-				-2.9592,
-				-2.4159,
-				5.0537
+				-2.959199905395508,
+				-2.4158999919891357,
+				5.053699970245361
 			],
 			"_binaryInfo": {
 				"positionsAttrDesc": {

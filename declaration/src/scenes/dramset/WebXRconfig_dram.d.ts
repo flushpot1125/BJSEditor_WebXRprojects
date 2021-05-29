@@ -1,5 +1,6 @@
 import { Node } from "@babylonjs/core";
 import { Mesh } from "@babylonjs/core";
+import ParticleComponent from "./Particle";
 /**
  * This represents a script that is attached to a node in the editor.
  * Available nodes are:
@@ -28,6 +29,7 @@ export default class WebXRConfigDramset extends Node {
     _cymbal2: Mesh;
     _cymbal3: Mesh;
     _cymbal4: Mesh;
+    _particle: ParticleComponent;
     /**
      * Override constructor.
      * @warn do not fill.

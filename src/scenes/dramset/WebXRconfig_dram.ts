@@ -1,7 +1,9 @@
-import { Node } from "@babylonjs/core";
+import { Node, KeyboardEventTypes } from "@babylonjs/core";
 import * as BABYLON from "@babylonjs/core/Legacy/legacy";
 import {MeshBuilder,Vector3,Mesh} from "@babylonjs/core";
-import { fromScene } from "../tools";
+import { fromScene ,onKeyboardEvent} from "../tools";
+
+import ParticleComponent from "./Particle"
 
 
 /**
@@ -50,6 +52,9 @@ export default class WebXRConfigDramset extends Node {
     @fromScene("cymbal4")
     _cymbal4 :Mesh;
 
+    @fromScene("Particle")
+    _particle : ParticleComponent;
+
     /**
      * Override constructor.
      * @warn do not fill.
@@ -79,16 +84,22 @@ export default class WebXRConfigDramset extends Node {
         let __cymbal2 = this._cymbal2;
         let __cymbal3 = this._cymbal3;
         let __cymbal4 = this._cymbal4;
+        let __particle= this._particle;
 
         let light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), this._scene);
         light.intensity = 0.7;
 
         let wcf =async function WebXRConfigration():Promise<void>{
+            const env = __scene.createDefaultEnvironment();
             let xr = await __scene.createDefaultXRExperienceAsync({
-                //   floorMeshes: [env.ground]
+                   floorMeshes: [env.ground]
             });
 
+
+
             /* avoid low performance thanks for @ninisan_drumath */
+            
+
             __scene.postProcessRenderPipelineManager.detachCamerasFromRenderPipeline("ssao", __scene.activeCamera);
             __scene.postProcessRenderPipelineManager.supportedPipelines.forEach(pp=>{
                 __scene.postProcessRenderPipelineManager.detachCamerasFromRenderPipeline(
@@ -96,6 +107,7 @@ export default class WebXRConfigDramset extends Node {
                     __scene.activeCamera
                 );
            });
+           
 
            xr.input.onControllerAddedObservable.add((controller) => {
                 controller.onMotionControllerInitObservable.add((motionController) => {
@@ -149,24 +161,33 @@ export default class WebXRConfigDramset extends Node {
                         cymbal1_right_standardTrigger_Component.onButtonStateChangedObservable.add(() => {
                             if (cymbal1_right_standardTrigger_Component.pressed) {
                                 __cymbal1.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                               
                             }else{
                                 __cymbal1.scaling= new BABYLON.Vector3(1,1,1);
+                               
                             }
                         });
                         let cymbal2_right_squeeze_Component = motionController.getComponent(xr_ids[1]);//xr-standard-squeeze
                         cymbal2_right_squeeze_Component.onButtonStateChangedObservable.add(() => {
                             if (cymbal2_right_squeeze_Component.pressed) {
                                 __cymbal2.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                                __particle.start_starParticle();
+                                console.log("xr-standard-squeese pressed");
                             }else{
                                 __cymbal2.scaling= new BABYLON.Vector3(1,1,1);
+                                __particle.stop_starParticle();
+                                
                             }
                         });
                         let dram2_right_button_Component = motionController.getComponent(xr_ids[3]);//a-button
                         dram2_right_button_Component.onButtonStateChangedObservable.add(() => {
                             if (dram2_right_button_Component.pressed) {
                                 __Dram2.scaling= new BABYLON.Vector3(1.2,1.2,1.2);
+                                __particle.stop_starParticle();
+                               
                             }else{
                                 __Dram2.scaling= new BABYLON.Vector3(1,1,1);
+                                
                             }
                         });
                         let dram1_right_button_Component = motionController.getComponent(xr_ids[4]);//b-button
@@ -208,4 +229,6 @@ export default class WebXRConfigDramset extends Node {
                 break;
         }
     }
+
+
 }

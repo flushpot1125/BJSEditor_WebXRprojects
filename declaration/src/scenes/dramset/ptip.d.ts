@@ -1,5 +1,5 @@
-import { TransformNode } from "@babylonjs/core";
-export default class ParticleComponent extends TransformNode {
+import { Node } from "@babylonjs/core";
+export default class ptip extends Node {
     /**
      * Override constructor.
      * @warn do not fill.
@@ -25,8 +25,6 @@ export default class ParticleComponent extends TransformNode {
      * @param sender defines the reference to the graph class that sent the message.
      */
     onMessage(name: string, data: any, sender: any): void;
-    protected particlestart_test(): void;
-    protected particlestop_test(): void;
     start_starParticle(): void;
     stop_starParticle(): void;
 }

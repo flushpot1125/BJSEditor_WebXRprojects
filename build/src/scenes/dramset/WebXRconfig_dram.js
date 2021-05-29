@@ -108,16 +108,19 @@ var WebXRConfigDramset = /** @class */ (function (_super) {
         var __cymbal2 = this._cymbal2;
         var __cymbal3 = this._cymbal3;
         var __cymbal4 = this._cymbal4;
+        var __particle = this._particle;
         var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), this._scene);
         light.intensity = 0.7;
         var wcf = function WebXRConfigration() {
             return __awaiter(this, void 0, void 0, function () {
-                var xr;
+                var env, xr;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0: return [4 /*yield*/, __scene.createDefaultXRExperienceAsync({
-                            //   floorMeshes: [env.ground]
-                            })];
+                        case 0:
+                            env = __scene.createDefaultEnvironment();
+                            return [4 /*yield*/, __scene.createDefaultXRExperienceAsync({
+                                    floorMeshes: [env.ground]
+                                })];
                         case 1:
                             xr = _a.sent();
                             /* avoid low performance thanks for @ninisan_drumath */
@@ -190,15 +193,19 @@ var WebXRConfigDramset = /** @class */ (function (_super) {
                                         cymbal2_right_squeeze_Component_1.onButtonStateChangedObservable.add(function () {
                                             if (cymbal2_right_squeeze_Component_1.pressed) {
                                                 __cymbal2.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+                                                __particle.start_starParticle();
+                                                console.log("xr-standard-squeese pressed");
                                             }
                                             else {
                                                 __cymbal2.scaling = new BABYLON.Vector3(1, 1, 1);
+                                                __particle.stop_starParticle();
                                             }
                                         });
                                         var dram2_right_button_Component_1 = motionController.getComponent(xr_ids[3]); //a-button
                                         dram2_right_button_Component_1.onButtonStateChangedObservable.add(function () {
                                             if (dram2_right_button_Component_1.pressed) {
                                                 __Dram2.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+                                                __particle.stop_starParticle();
                                             }
                                             else {
                                                 __Dram2.scaling = new BABYLON.Vector3(1, 1, 1);
@@ -270,6 +277,9 @@ var WebXRConfigDramset = /** @class */ (function (_super) {
     __decorate([
         tools_1.fromScene("cymbal4")
     ], WebXRConfigDramset.prototype, "_cymbal4", void 0);
+    __decorate([
+        tools_1.fromScene("Particle")
+    ], WebXRConfigDramset.prototype, "_particle", void 0);
     return WebXRConfigDramset;
 }(core_1.Node));
 exports.default = WebXRConfigDramset;

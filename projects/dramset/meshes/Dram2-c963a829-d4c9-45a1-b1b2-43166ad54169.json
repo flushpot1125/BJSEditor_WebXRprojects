@@ -5,12 +5,12 @@
 		{
 			"name": "Dram2",
 			"id": "c963a829-d4c9-45a1-b1b2-43166ad54169",
-			"uniqueId": 367,
+			"uniqueId": 21,
 			"type": "Mesh",
 			"position": [
-				-7500,
-				-3233.310817666488,
-				-4882.409812572641
+				0,
+				0,
+				0
 			],
 			"rotation": [
 				0,
@@ -42,6 +42,7 @@
 			},
 			"isEnabled": true,
 			"isVisible": true,
+			"infiniteDistance": false,
 			"pickable": true,
 			"receiveShadows": false,
 			"billboardMode": 0,
@@ -76,7 +77,11 @@
 					"name": "Dram2",
 					"sceneFileName": "dram_v4.babylon"
 				},
-				"isPickable": true
+				"isPickable": true,
+				"script": {
+					"name": "None"
+				},
+				"renderingGroupId": 0
 			},
 			"instances": [],
 			"animations": [],
@@ -92,14 +97,14 @@
 			"applyFog": true,
 			"delayLoadingFile": "geometries/622aad0d-0470-4563-b3fb-c0d6b920825a.babylonbinarymeshdata",
 			"boundingBoxMaximum": [
-				2.4344,
-				0.8145,
-				3.824
+				2.4344000816345215,
+				0.8144999742507935,
+				3.8239998817443848
 			],
 			"boundingBoxMinimum": [
-				-0.0228,
-				-0.3853,
-				1.3668
+				-0.02280000038444996,
+				-0.38530001044273376,
+				1.3667999505996704
 			],
 			"_binaryInfo": {
 				"positionsAttrDesc": {

@@ -1,7 +1,6 @@
-import { Node } from "@babylonjs/core";
+import { TransformNode,KeyboardEventTypes } from "@babylonjs/core";
 import * as BABYLON from "@babylonjs/core/Legacy/legacy";
-import {AdvancedDynamicTexture,StackPanel,Image} from "@babylonjs/gui";
-
+import { fromScene ,onKeyboardEvent} from "../tools";
 /**
  * This represents a script that is attached to a node in the editor.
  * Available nodes are:
@@ -20,7 +19,8 @@ import {AdvancedDynamicTexture,StackPanel,Image} from "@babylonjs/gui";
  * The function "onInitialize" is called immediately after the constructor is called.
  * The functions "onStart" and "onUpdate" are called automatically.
  */
-export default class ptip extends Node {
+ let starParticleSystem;
+export default class ParticleComponent extends TransformNode {
     /**
      * Override constructor.
      * @warn do not fill.
@@ -39,12 +39,15 @@ export default class ptip extends Node {
     /**
      * Called on the scene starts.
      */
+
     public onStart(): void {
-        let starParticleSystem =  new BABYLON.ParticleSystem("particles", 2000, this._scene);
-       // starParticleSystem.particleTexture = new BABYLON.Texture("../files/star.png",this._scene);
+        starParticleSystem =  new BABYLON.ParticleSystem("particles", 200, this._scene);
         starParticleSystem.particleTexture = new BABYLON.Texture("../../../../scenes/dramset/files/star.png",this._scene);
         starParticleSystem.emitter = new BABYLON.Vector3(0, 0.5, 0);
-        starParticleSystem.start();
+        starParticleSystem.minLifeTime = 5;
+        starParticleSystem.maxLifeTime = 5;
+
+
     }
 
     /**
@@ -67,4 +70,27 @@ export default class ptip extends Node {
                 break;
         }
     }
+
+    @onKeyboardEvent(65, KeyboardEventTypes.KEYDOWN)
+    protected particlestart_test(): void {
+        this.start_starParticle();
+        console.log("start");
+    }
+
+    @onKeyboardEvent(68, KeyboardEventTypes.KEYDOWN)
+    protected particlestop_test(): void {
+        this.stop_starParticle();
+        console.log("stop");
+    }
+
+    public start_starParticle():void{
+
+        starParticleSystem.start();
+        
+    }
+
+    public stop_starParticle():void{
+        starParticleSystem.stop();
+    }
+
 }

@@ -12,16 +12,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@babylonjs/core");
 var BABYLON = require("@babylonjs/core/Legacy/legacy");
-var tools_1 = require("../tools");
 /**
  * This represents a script that is attached to a node in the editor.
  * Available nodes are:
@@ -41,14 +34,14 @@ var tools_1 = require("../tools");
  * The functions "onStart" and "onUpdate" are called automatically.
  */
 var starParticleSystem;
-var ParticleComponent = /** @class */ (function (_super) {
-    __extends(ParticleComponent, _super);
+var ptip = /** @class */ (function (_super) {
+    __extends(ptip, _super);
     /**
      * Override constructor.
      * @warn do not fill.
      */
     // @ts-ignore ignoring the super call as we don't want to re-init
-    function ParticleComponent() {
+    function ptip() {
         var _this = this;
         return _this;
     }
@@ -56,23 +49,24 @@ var ParticleComponent = /** @class */ (function (_super) {
      * Called on the node is being initialized.
      * This function is called immediatly after the constructor has been called.
      */
-    ParticleComponent.prototype.onInitialize = function () {
+    ptip.prototype.onInitialize = function () {
         // ...
     };
     /**
      * Called on the scene starts.
      */
-    ParticleComponent.prototype.onStart = function () {
-        starParticleSystem = new BABYLON.ParticleSystem("particles", 200, this._scene);
+    ptip.prototype.onStart = function () {
+        starParticleSystem = new BABYLON.ParticleSystem("particles", 2000, this._scene);
+        // starParticleSystem.particleTexture = new BABYLON.Texture("../files/star.png",this._scene);
         starParticleSystem.particleTexture = new BABYLON.Texture("../../../../scenes/dramset/files/star.png", this._scene);
         starParticleSystem.emitter = new BABYLON.Vector3(0, 0.5, 0);
-        starParticleSystem.minLifeTime = 5;
-        starParticleSystem.maxLifeTime = 5;
+        starParticleSystem.start();
+        // starParticleSystem.stop();
     };
     /**
      * Called each frame.
      */
-    ParticleComponent.prototype.onUpdate = function () {
+    ptip.prototype.onUpdate = function () {
         // ...
     };
     /**
@@ -81,34 +75,20 @@ var ParticleComponent = /** @class */ (function (_super) {
      * @param data defines the data sent in the message.
      * @param sender defines the reference to the graph class that sent the message.
      */
-    ParticleComponent.prototype.onMessage = function (name, data, sender) {
+    ptip.prototype.onMessage = function (name, data, sender) {
         switch (name) {
             case "myMessage":
                 // Do something...
                 break;
         }
     };
-    ParticleComponent.prototype.particlestart_test = function () {
-        this.start_starParticle();
-        console.log("start");
-    };
-    ParticleComponent.prototype.particlestop_test = function () {
-        this.stop_starParticle();
-        console.log("stop");
-    };
-    ParticleComponent.prototype.start_starParticle = function () {
+    ptip.prototype.start_starParticle = function () {
         starParticleSystem.start();
     };
-    ParticleComponent.prototype.stop_starParticle = function () {
+    ptip.prototype.stop_starParticle = function () {
         starParticleSystem.stop();
     };
-    __decorate([
-        tools_1.onKeyboardEvent(65, core_1.KeyboardEventTypes.KEYDOWN)
-    ], ParticleComponent.prototype, "particlestart_test", null);
-    __decorate([
-        tools_1.onKeyboardEvent(68, core_1.KeyboardEventTypes.KEYDOWN)
-    ], ParticleComponent.prototype, "particlestop_test", null);
-    return ParticleComponent;
-}(core_1.TransformNode));
-exports.default = ParticleComponent;
-//# sourceMappingURL=Particle.js.map
+    return ptip;
+}(core_1.Node));
+exports.default = ptip;
+//# sourceMappingURL=ptip.js.map

@@ -4,12 +4,12 @@
 		{
 			"name": "cymbal3",
 			"id": "07c4137a-6d64-4703-8a0e-e186d71ba8bd",
-			"uniqueId": 347,
+			"uniqueId": 20,
 			"type": "Mesh",
 			"position": [
-				-7500,
-				-3233.310817666488,
-				-4882.409812572641
+				0,
+				0,
+				0
 			],
 			"rotation": [
 				0,
@@ -41,6 +41,7 @@
 			},
 			"isEnabled": true,
 			"isVisible": true,
+			"infiniteDistance": false,
 			"pickable": true,
 			"receiveShadows": false,
 			"billboardMode": 0,
@@ -75,7 +76,11 @@
 					"name": "cymbal3",
 					"sceneFileName": "dram_v4.babylon"
 				},
-				"isPickable": true
+				"isPickable": true,
+				"script": {
+					"name": "None"
+				},
+				"renderingGroupId": 0
 			},
 			"instances": [],
 			"animations": [],
@@ -92,13 +97,13 @@
 			"delayLoadingFile": "geometries/d9734af3-103a-44c3-ab0d-27b2b82e9cc9.babylonbinarymeshdata",
 			"boundingBoxMaximum": [
 				1,
-				1.7748,
-				-3.7525
+				1.7747999429702759,
+				-3.752500057220459
 			],
 			"boundingBoxMinimum": [
 				-1,
-				1.1982,
-				-5.7525
+				1.198199987411499,
+				-5.752500057220459
 			],
 			"_binaryInfo": {
 				"positionsAttrDesc": {
